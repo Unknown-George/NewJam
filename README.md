@@ -1,97 +1,178 @@
-# 🐰 NewJams ♡
+# NewJams
 
 <div align="center">
 
-### 🎀 your little corner of music & happiness 🎀
+### A Modern Music Platform Inspired by NewJeans
 
-*A dreamy, pastel-inspired music player made with love for NewJeans fans.*
+An independently developed web application for discovering, organizing, and enjoying music through a streamlined listening experience.
 
-🌷 🐇 ✨ 💗 🎧 🌸
-
-# [🎧 OPEN NEWJAMS ♡](https://newjams.netlify.app)
-
-### [🌸 NEWJAMS.NETLIFY.APP 🌸](https://newjams.netlify.app)
-
-**Your favorite music, all in one cozy little place.**
-
-</div>
-
----
-
-## 🌸 Welcome to NewJams!
-
-**NewJams ♡** is a cute, unofficial NewJeans-inspired music player designed to bring your favorite songs and music videos together in one adorable place.
-
-Inspired by soft pastel colors, Y2K aesthetics, and the playful charm of NewJeans, NewJams is a little corner of the internet made for Bunnies everywhere. 🐰💕
-
-No installation needed — just open the website and enjoy!
-
-## 🎧 Features
-
-- 🎀 **Dreamy Pastel Interface** — A soft, cozy music-listening experience.
-- 🎶 **NewJeans Music Collection** — Explore your favorite releases.
-- 📺 **Official Music Videos** — Enjoy music videos through YouTube embeds.
-- 💗 **Personal Playlists** — Create and organize your favorite tracks.
-- 🌷 **Favorites** — Keep your favorite songs close.
-- 🐰 **Custom Profiles** — Personalize your account and avatar.
-- 🔐 **Account Features** — Sign up and log in with Supabase authentication.
-- ✨ **Listening Statistics** — See your listening activity.
-- ⚙️ **Settings** — Customize your experience.
-
-*Some features may require an account.*
-
-## 💻 Available Online
-
-NewJams is a browser-based music player.
-
-You can use it on compatible devices without downloading or installing anything.
-
-<div align="center">
-
-# 🎀 [LAUNCH NEWJAMS](https://newjams.netlify.app)
+**[Launch Application](https://newjams.netlify.app)** | **[Developer GitHub](https://github.com/Unknown-George)**
 
 **https://newjams.netlify.app**
 
-🐰 happy listening! ♡
+</div>
+
+---
+
+## Overview
+
+**NewJams** is a web-based music player developed to provide a centralized platform for exploring NewJeans' music catalog, watching official music videos, and managing personalized music collections.
+
+The application combines modern frontend technologies with cloud-based authentication and data management to deliver an intuitive, responsive, and consistent user experience.
+
+Designed with an emphasis on functionality, visual consistency, and ease of use, NewJams demonstrates the integration of interactive media, user account management, and personalized application features within a modern web environment.
+
+NewJams is an independent software development project and is not an official product of NewJeans or its associated organizations.
+
+## Core Features
+
+### Music Library
+- Browse an organized collection of NewJeans releases.
+- Access individual tracks and associated media.
+- Navigate the music catalog through a centralized interface.
+
+### Media Integration
+- Watch official music videos through embedded YouTube players.
+- Access supported video content without leaving the application.
+- Utilize integrated media playback controls.
+
+### Playlist Management
+- Create and manage personalized playlists.
+- Add or remove tracks from saved collections.
+- Organize music according to individual preferences.
+
+### User Accounts and Authentication
+- Register and sign in through Supabase Authentication.
+- Manage personal account information.
+- Customize user profiles and avatars.
+- Access account-specific application features.
+
+### Listening Analytics
+- View accumulated listening time.
+- Identify frequently played tracks.
+- Review personal listening activity.
+
+### Application Interface
+- Responsive layouts for compatible desktop and mobile browsers.
+- Consistent navigation and media controls.
+- Customizable application settings.
+- A cohesive interface influenced by contemporary and Y2K-inspired design principles.
+
+*Feature availability may vary as the application continues to evolve.*
+
+## Live Application
+
+NewJams is deployed through Netlify and is accessible directly from a modern web browser.
+
+No local installation, development environment, or additional software is required to access the hosted application.
+
+<div align="center">
+
+### [Open NewJams](https://newjams.netlify.app)
+
+**Production Website:** https://newjams.netlify.app
 
 </div>
 
-## 🧸 Project Information
+## Technology Stack
 
-NewJams is a personal, independently developed fan project created to celebrate music, creativity, and web design.
+| Component | Technology |
+|---|---|
+| Frontend Framework | React |
+| Programming Language | JavaScript |
+| Styling | CSS |
+| Build System | Vite |
+| Authentication | Supabase Auth |
+| Backend Services | Supabase |
+| Database | Supabase PostgreSQL |
+| Media Integration | YouTube Embedded Player |
+| Deployment | Netlify |
+| Version Control | Git |
+| Source Code Management | GitHub |
 
-The public website is intended for listening to music and watching videos, rather than distributing music files.
+## Application Architecture
 
-## 🎀 Created By
+NewJams follows a modern client-side web application architecture, integrating frontend components with managed backend services.
+
+**Frontend**
+
+The user interface is developed using React, with reusable components responsible for navigation, media presentation, account interfaces, and interactive application features.
+
+**Authentication and Data Management**
+
+Supabase provides authentication and backend infrastructure for supporting user accounts and application data.
+
+**Media Delivery**
+
+Music-related video content is accessed through YouTube's embedded player. The application does not independently distribute copyrighted audio or video files.
+
+**Deployment**
+
+The application is built using Vite and hosted through Netlify, allowing users to access the production website without installing a local development environment.
+
+## Project Objectives
+
+The primary objectives of NewJams are to:
+
+1. Develop a functional, responsive music application using modern web technologies.
+2. Implement secure user authentication and personalized account features.
+3. Integrate external media services into a unified application interface.
+4. Provide intuitive playlist management and listening analytics.
+5. Maintain a consistent, accessible, and scalable frontend structure.
+6. Gain practical experience in full-stack application development, deployment, and maintenance.
+
+## Development and Maintenance
+
+NewJams is an independently maintained project. Development focuses on improving application functionality, interface consistency, reliability, and the overall user experience.
+
+Future enhancements may include additional account customization, expanded listening analytics, improved playlist functionality, and further interface optimizations.
+
+Features and functionality are subject to change throughout development.
+
+## Developer
 
 **George Paraskevopoulos**
 
-GitHub: [@Unknown-George](https://github.com/Unknown-George)
+Independent Software Developer
 
-Made with love, creativity, and lots of pink. 💗
+**GitHub:** [github.com/Unknown-George](https://github.com/Unknown-George)
 
-## 🔒 Copyright
+**Application:** [newjams.netlify.app](https://newjams.netlify.app)
 
-**© 2026 George Paraskevopoulos.**
+NewJams was independently designed and developed as a software engineering project demonstrating practical experience with frontend development, backend integration, authentication systems, and web application deployment.
 
-Original project code and designs are subject to the license applicable to their release. Third-party content retains its respective owners' rights.
+## Intellectual Property and Licensing
 
-## 🐇 Disclaimer
+**Copyright © 2026 George Paraskevopoulos. All rights reserved, except as otherwise provided by the applicable project license.**
 
-NewJams is an **unofficial fan-made project** and is not affiliated with, sponsored by, or endorsed by NewJeans, ADOR, HYBE, or YouTube.
+The original source code, independently created design elements, and project-specific assets are governed by the licensing terms accompanying their respective releases.
 
-All music, videos, artist names, trademarks, and third-party artwork belong to their respective owners. Videos are accessed through YouTube embeds.
+Third-party intellectual property, including music recordings, music videos, artist names, trademarks, logos, and promotional artwork, remains the property of the respective rights holders.
+
+No ownership of third-party intellectual property is claimed.
+
+## Legal Disclaimer
+
+NewJams is an **independent, unofficial fan-developed application**.
+
+The project is not affiliated with, authorized by, sponsored by, or endorsed by NewJeans, ADOR, HYBE, YouTube, or any of their respective subsidiaries or affiliates.
+
+References to NewJeans and associated media are provided for identification and informational purposes.
+
+Embedded media remains subject to the availability, permissions, and terms established by its respective content providers.
 
 ---
 
 <div align="center">
 
-### 🌷 thank you for visiting! 🌷
+**NewJams**
 
-**stay cozy, keep listening & enjoy the music ♡**
+A Web-Based Music Application
 
-🐰 🎀 🌸 ✨ 💗
+**Developed and Maintained by [George Paraskevopoulos](https://github.com/Unknown-George)**
 
-*made with ♡ by Unknown-George*
+[Launch Application](https://newjams.netlify.app) | [GitHub Profile](https://github.com/Unknown-George)
+
+© 2026 George Paraskevopoulos
 
 </div>
