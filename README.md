@@ -1,14 +1,14 @@
-# NewJams
+ <div align="center">
 
-<div align="center">
+# NewJams ♡
 
-### A Modern Music Platform Inspired by NewJeans
+### A Modern Music Experience Inspired by NewJeans
 
-An independently developed web application for discovering, organizing, and enjoying music through a streamlined listening experience.
+*A thoughtfully designed music platform combining modern web technologies with a nostalgic, Y2K-inspired listening experience.*
 
-**[Launch Application](https://newjams.netlify.app)** | **[Developer GitHub](https://github.com/Unknown-George)**
+**[Launch NewJams](https://newjams.netlify.app)** · **[Developer GitHub](https://github.com/Unknown-George)**
 
-**https://newjams.netlify.app**
+**[newjams.netlify.app](https://newjams.netlify.app)**
 
 </div>
 
@@ -16,150 +16,183 @@ An independently developed web application for discovering, organizing, and enjo
 
 ## Overview
 
-**NewJams** is a web-based music player developed to provide a centralized platform for exploring NewJeans' music catalog, watching official music videos, and managing personalized music collections.
+**NewJams** is an independently developed, web-based music application inspired by NewJeans.
 
-The application combines modern frontend technologies with cloud-based authentication and data management to deliver an intuitive, responsive, and consistent user experience.
+The platform is designed to bring music, official music videos, and personalized listening features together within a unified, accessible interface.
 
-Designed with an emphasis on functionality, visual consistency, and ease of use, NewJams demonstrates the integration of interactive media, user account management, and personalized application features within a modern web environment.
+Built using modern frontend technologies and cloud-based services, NewJams emphasizes intuitive navigation, responsive design, and a consistent user experience.
 
-NewJams is an independent software development project and is not an official product of NewJeans or its associated organizations.
+The project combines practical software engineering with a distinctive visual identity influenced by contemporary digital design and nostalgic Y2K aesthetics.
 
-## Core Features
-
-### Music Library
-- Browse an organized collection of NewJeans releases.
-- Access individual tracks and associated media.
-- Navigate the music catalog through a centralized interface.
-
-### Media Integration
-- Watch official music videos through embedded YouTube players.
-- Access supported video content without leaving the application.
-- Utilize integrated media playback controls.
-
-### Playlist Management
-- Create and manage personalized playlists.
-- Add or remove tracks from saved collections.
-- Organize music according to individual preferences.
-
-### User Accounts and Authentication
-- Register and sign in through Supabase Authentication.
-- Manage personal account information.
-- Customize user profiles and avatars.
-- Access account-specific application features.
-
-### Listening Analytics
-- View accumulated listening time.
-- Identify frequently played tracks.
-- Review personal listening activity.
-
-### Application Interface
-- Responsive layouts for compatible desktop and mobile browsers.
-- Consistent navigation and media controls.
-- Customizable application settings.
-- A cohesive interface influenced by contemporary and Y2K-inspired design principles.
-
-*Feature availability may vary as the application continues to evolve.*
+NewJams is an independent software project and is not an official product of NewJeans or any associated organization.
 
 ## Live Application
 
-NewJams is deployed through Netlify and is accessible directly from a modern web browser.
+NewJams is publicly accessible through its official website.
 
-No local installation, development environment, or additional software is required to access the hosted application.
+**Website:** https://newjams.netlify.app
 
-<div align="center">
+**[Launch Application](https://newjams.netlify.app)**
 
-### [Open NewJams](https://newjams.netlify.app)
+The application runs directly in a compatible web browser. No installation, development environment, or additional software is required.
 
-**Production Website:** https://newjams.netlify.app
+The source repository is privately maintained and is not publicly distributed.
 
-</div>
+## Features
+
+### Music Library
+
+- Browse an organized collection of NewJeans music releases.
+- Access available tracks and associated media.
+- Navigate music content through a centralized interface.
+
+### Media Integration
+
+- Access official music videos through YouTube embeds.
+- View supported media directly within the application.
+- Use integrated playback controls where supported.
+
+### Playlist Management
+
+- Create and organize personal playlists.
+- Add or remove tracks from saved collections.
+- Maintain a personalized music library.
+
+### User Accounts
+
+- Email and password authentication through Supabase.
+- Personalized account profiles.
+- Profile information and avatar customization.
+- Account-specific preferences and saved content.
+
+### Listening Analytics
+
+- Track accumulated listening time.
+- Identify frequently played songs.
+- Review individual listening activity.
+
+### User Interface
+
+- Modern, pastel-inspired visual design.
+- Responsive layouts for compatible devices.
+- Consistent navigation and media controls.
+- Personalized settings and preferences.
+- Interface elements influenced by contemporary and Y2K design.
+
+*NewJams is an evolving application. Certain features may be in development, experimental, or subject to change.*
 
 ## Technology Stack
 
-| Component | Technology |
+| Category | Technology |
 |---|---|
 | Frontend Framework | React |
 | Programming Language | JavaScript |
 | Styling | CSS |
-| Build System | Vite |
+| Build Tool | Vite |
 | Authentication | Supabase Auth |
 | Backend Services | Supabase |
-| Database | Supabase PostgreSQL |
-| Media Integration | YouTube Embedded Player |
+| Database Platform | PostgreSQL via Supabase |
+| Media Integration | YouTube Embeds |
 | Deployment | Netlify |
 | Version Control | Git |
-| Source Code Management | GitHub |
 
 ## Application Architecture
 
-NewJams follows a modern client-side web application architecture, integrating frontend components with managed backend services.
+NewJams follows a modern web application architecture, combining a component-based frontend with managed backend services and external media integration.
 
-**Frontend**
+### Frontend
 
-The user interface is developed using React, with reusable components responsible for navigation, media presentation, account interfaces, and interactive application features.
+The application interface is developed using React and JavaScript.
 
-**Authentication and Data Management**
+Reusable components support navigation, media presentation, account interfaces, and interactive application functionality.
 
-Supabase provides authentication and backend infrastructure for supporting user accounts and application data.
+Vite provides the frontend development and build infrastructure.
 
-**Media Delivery**
+### Authentication and Data Management
 
-Music-related video content is accessed through YouTube's embedded player. The application does not independently distribute copyrighted audio or video files.
+Supabase provides authentication and backend services supporting account-related functionality and application data.
 
-**Deployment**
+The architecture is designed to accommodate personalized user experiences and persistent account information.
 
-The application is built using Vite and hosted through Netlify, allowing users to access the production website without installing a local development environment.
+### Media Integration
+
+NewJams integrates third-party video content through YouTube's embedded player.
+
+Media playback is dependent on the availability and permissions established by the respective content providers.
+
+NewJams does not independently distribute copyrighted music recordings or video files.
+
+### Hosting and Deployment
+
+The application is deployed through Netlify, providing public access through a browser-based interface.
+
+The production website is maintained independently, with updates delivered as development progresses.
 
 ## Project Objectives
 
-The primary objectives of NewJams are to:
+NewJams was developed with the following objectives:
 
-1. Develop a functional, responsive music application using modern web technologies.
-2. Implement secure user authentication and personalized account features.
-3. Integrate external media services into a unified application interface.
-4. Provide intuitive playlist management and listening analytics.
-5. Maintain a consistent, accessible, and scalable frontend structure.
-6. Gain practical experience in full-stack application development, deployment, and maintenance.
+1. Create a functional, accessible, and visually consistent music application.
+2. Integrate modern frontend technologies with cloud-based backend services.
+3. Support user authentication and personalized application features.
+4. Provide a centralized interface for accessing supported music-related media.
+5. Develop playlist management and listening analytics functionality.
+6. Improve practical experience in web application architecture, development, and deployment.
 
 ## Development and Maintenance
 
-NewJams is an independently maintained project. Development focuses on improving application functionality, interface consistency, reliability, and the overall user experience.
+NewJams is an independently maintained software project.
 
-Future enhancements may include additional account customization, expanded listening analytics, improved playlist functionality, and further interface optimizations.
+Development focuses on improving application functionality, interface consistency, performance, accessibility, and reliability.
 
-Features and functionality are subject to change throughout development.
+Potential future enhancements include expanded profile customization, additional listening analytics, improved playlist organization, and further interface optimization.
+
+Features, design elements, and functionality may change throughout development.
+
+## Source Code and Distribution
+
+NewJams is a privately maintained software project.
+
+The original source repository, development files, and internal project resources are not publicly distributed.
+
+Public access is provided exclusively through the hosted web application.
+
+The availability of the website does not grant permission to redistribute, republish, or commercially exploit proprietary project materials.
+
+Any third-party components remain subject to their respective licenses.
 
 ## Developer
 
-**George Paraskevopoulos**
-
+**George Paraskevopoulos**  
 Independent Software Developer
 
 **GitHub:** [github.com/Unknown-George](https://github.com/Unknown-George)
 
 **Application:** [newjams.netlify.app](https://newjams.netlify.app)
 
-NewJams was independently designed and developed as a software engineering project demonstrating practical experience with frontend development, backend integration, authentication systems, and web application deployment.
+NewJams was independently designed and developed as a personal software engineering project, demonstrating practical experience in frontend development, backend integration, authentication, media integration, and web deployment.
 
-## Intellectual Property and Licensing
+## Copyright and Intellectual Property
 
-**Copyright © 2026 George Paraskevopoulos. All rights reserved, except as otherwise provided by the applicable project license.**
+**Copyright © 2026 George Paraskevopoulos. All rights reserved.**
 
-The original source code, independently created design elements, and project-specific assets are governed by the licensing terms accompanying their respective releases.
+Original project code, independently created interface designs, and proprietary project assets are protected under applicable intellectual property laws.
 
-Third-party intellectual property, including music recordings, music videos, artist names, trademarks, logos, and promotional artwork, remains the property of the respective rights holders.
+No license to reproduce, modify, redistribute, or commercially exploit proprietary project materials is granted through public access to the application.
 
-No ownership of third-party intellectual property is claimed.
+Third-party music, videos, trademarks, logos, artwork, and other copyrighted materials remain the property of their respective rights holders.
 
-## Legal Disclaimer
+## Disclaimer
 
 NewJams is an **independent, unofficial fan-developed application**.
 
-The project is not affiliated with, authorized by, sponsored by, or endorsed by NewJeans, ADOR, HYBE, YouTube, or any of their respective subsidiaries or affiliates.
+The project is not affiliated with, authorized by, sponsored by, or endorsed by NewJeans, ADOR, HYBE, YouTube, or their respective subsidiaries or affiliates.
 
-References to NewJeans and associated media are provided for identification and informational purposes.
+References to NewJeans and associated media are provided for descriptive and identification purposes only.
 
-Embedded media remains subject to the availability, permissions, and terms established by its respective content providers.
+Third-party media is accessed through supported external services and remains subject to applicable copyright restrictions, platform terms, and content availability.
+
+NewJams does not claim ownership of third-party intellectual property.
 
 ---
 
@@ -169,9 +202,9 @@ Embedded media remains subject to the availability, permissions, and terms estab
 
 A Web-Based Music Application
 
-**Developed and Maintained by [George Paraskevopoulos](https://github.com/Unknown-George)**
+Developed and Maintained by **[George Paraskevopoulos](https://github.com/Unknown-George)**
 
-[Launch Application](https://newjams.netlify.app) | [GitHub Profile](https://github.com/Unknown-George)
+[Launch Application](https://newjams.netlify.app) · [Developer GitHub](https://github.com/Unknown-George)
 
 © 2026 George Paraskevopoulos
 
