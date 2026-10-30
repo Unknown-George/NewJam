@@ -1,508 +1,587 @@
-# NewJams ♡
+# NewJams
 
-### A Modern Music Experience Inspired by NewJeans
+**A Cross-Platform Music Application Inspired by NewJeans**
 
-**An independently developed, cross-platform music application combining modern web technologies, personalized listening features, and a nostalgic Y2K-inspired interface.**
+An independently developed music platform combining a contemporary listening experience, personalized media management, and a distinctive Y2K-inspired interface.
 
-**[Launch NewJams](https://newjams.pages.dev/)** · **[Download Desktop App](https://newjams.pages.dev/)** · **[Developer GitHub](https://github.com/Unknown-George)**
+**[Launch Application](https://newjams.pages.dev/)** · **[Download for Desktop](https://newjams.pages.dev/)** · **[Developer Profile](https://github.com/Unknown-George)**
 
-🌐 **Website:** https://newjams.pages.dev/  
-💻 **Platforms:** Web · Windows · macOS  
-🎀 **Current Release:** v1.0.4  
-🔒 **Source Code:** Privately maintained
-
----
-
-## Overview
-
-**NewJams** is an independently developed music application inspired by the music and visual identity of NewJeans.
-
-Originally conceived as a web-based music player, the project has evolved into a cross-platform application supporting modern web browsers, Windows computers, and macOS devices.
-
-NewJams brings together music discovery, official music videos, dance practice content, personalized playlists, account management, and listening-related features within a unified interface.
-
-The application combines a React-based frontend, Supabase backend services, Electron desktop integration, and Cloudflare infrastructure to provide a consistent experience across supported platforms.
-
-Beyond its visual design, NewJams represents a practical software engineering project involving frontend development, authentication, cloud infrastructure, desktop application packaging, release automation, software distribution, and secure version management.
-
-**NewJams is an independent, unofficial fan-developed application and is not affiliated with NewJeans or its associated organizations.**
+| Project Information | Details |
+|---|---|
+| **Application** | NewJams |
+| **Latest Confirmed Release** | v1.0.5 |
+| **Supported Platforms** | Web, Windows x64, macOS ARM64, macOS x64 |
+| **Application Type** | Cross-platform music and media player |
+| **Development** | Independent software project |
+| **Source Availability** | Proprietary — private repositories |
+| **Official Website** | [newjams.pages.dev](https://newjams.pages.dev/) |
+| **Developer** | [George Paraskevopoulos](https://github.com/Unknown-George) |
 
 ---
 
-## 🌐 Access NewJams
+## 01. Project Overview
 
-### Web Application
+**NewJams** is an independently developed, cross-platform music application inspired by NewJeans and the visual characteristics of early-2000s digital design.
 
-**Official Website:** https://newjams.pages.dev/
+Initially conceived as a browser-based music player, the project evolved into a desktop-capable application supporting modern web browsers, Windows, and macOS.
 
-**[Launch NewJams in Your Browser](https://newjams.pages.dev/)**
+The application brings together supported music playback, YouTube media integration, personal music libraries, playlist management, user authentication, and account-based preferences within a consistent interface.
 
-The web application runs directly in a compatible browser without requiring installation or development software.
+NewJams is built using **React, Vite, Electron, Supabase, PostgreSQL, and Cloudflare infrastructure**. Its development encompasses frontend engineering, managed backend integration, desktop application packaging, release automation, update verification, and production security hardening.
 
-Users can access the music player, browse available media, manage playlists, and use supported account features through the hosted application.
+The project demonstrates the process of developing and maintaining a complete user-facing software product, from interface implementation through deployment and distribution.
 
-### Desktop Application
-
-NewJams is also available as a standalone desktop application.
-
-| Platform | Supported Architecture | Distribution |
-|---|---|---|
-| Windows | x64 | `.exe` installer |
-| macOS | Apple Silicon (ARM64) | `.dmg` installer |
-| macOS | Intel (x64) | `.dmg` installer |
-
-**[Download NewJams for Windows or macOS](https://newjams.pages.dev/)**
-
-The desktop applications are packaged using Electron, allowing the React-based interface to run as an installed application.
-
-Desktop-specific functionality includes application startup handling, platform-aware navigation, update checks, and installer-based software updates.
-
-**Installation note:** Current desktop releases are unsigned and not notarized. Windows SmartScreen or macOS Gatekeeper may display a security warning during installation.
+**Project status:** v1.0.5 is the latest confirmed publicly released version. A subsequent playlist-focused improvement has been discussed but is not represented here as released.
 
 ---
 
-## ✨ Features
+## 02. Application Features
 
-### Music Library and Discovery
+### 2.1 Music Playback
 
-NewJams provides a centralized interface for exploring music associated with NewJeans.
+NewJams provides a custom playback interface integrated with supported YouTube media.
 
-- Browse an organized collection of music releases.
-- Discover available songs and related media.
-- Navigate between music content and playback interfaces.
-- Access supported tracks through integrated media services.
-- Use search functionality to locate available music content.
+Core capabilities include:
 
-The music library is designed to make navigation straightforward while maintaining a consistent visual presentation.
+- Media selection and playback.
+- Play, pause, and track navigation.
+- Music information and available artwork.
+- Integrated video playback controls.
+- Playback-state management.
+- Handling of unavailable or restricted embedded content.
+- External playback through YouTube when required.
 
-### Integrated Music Player
+The desktop application includes specific handling for YouTube's embedded-player client identity and referrer requirements.
 
-The application includes a custom listening interface designed around the NewJams visual identity.
+Playback availability remains subject to the original content provider's restrictions.
 
-Supported functionality includes:
+### 2.2 Personal Music Library
 
-- Track selection and playback controls.
-- Play and pause functionality.
-- Navigation between available songs.
-- Media playback state management.
-- Integration with supported YouTube playback functionality.
-- Playback-related error handling.
+The personal library provides a centralized location for organizing saved music and supported media.
 
-The desktop player includes platform-specific handling for YouTube's embedded player requirements.
+The interface integrates saved content with the broader application experience, allowing users to navigate between their library, media playback, and playlists.
 
-When a video cannot be embedded because of restrictions established by its owner, NewJams can provide an option to open that content directly on YouTube.
+Account-associated content is supported by the application's Supabase data architecture.
 
-Media availability and playback permissions remain controlled by the respective content providers.
+### 2.3 Playlist Management
 
-### Official Music Videos and Dance Practice
+NewJams includes functionality for building and maintaining personal music collections.
 
-NewJams organizes supported video content into dedicated areas.
+Supported operations include:
+
+- Creating personal playlists.
+- Naming and organizing collections.
+- Adding supported music and video entries.
+- Removing entries from playlists.
+- Accessing saved playlists across supported authenticated sessions.
+- Persisting account-associated playlist information.
+
+The playlist system is designed to provide accessible, organized media management while maintaining the application's established visual identity.
+
+### 2.4 Music Videos and Dance Practice
+
+NewJams provides dedicated navigation for supported video categories.
 
 **Music Videos**
-- Access official music video content through supported YouTube embeds.
-- Browse available videos within the application.
-- Open restricted content on YouTube when necessary.
+
+Allows users to browse and watch supported music videos through YouTube's embedded playback functionality.
 
 **Dance Practice**
-- Explore available dance practice videos.
-- Navigate dance-related content separately from the primary music library.
-- Use the integrated video player where embedding is permitted.
 
-NewJams does not independently host or redistribute copyrighted music recordings or video files.
+Provides a separate destination for supported dance-related video content.
 
-### Personalized Playlists
+Both sections use external media integration rather than independently hosting copyrighted recordings.
 
-Users can organize their listening experience through personal playlists.
+### 2.5 Search and Discovery
 
-- Create custom playlists.
-- Add songs to saved collections.
-- Remove songs from playlists.
-- Organize personal music selections.
-- Access supported saved content through their account.
+Search and discovery features support navigation through available music-related content.
 
-Playlist functionality is integrated with the application's account and data-management architecture.
+The interface allows users to locate supported media and access relevant content within the application.
 
-### User Accounts and Profiles
+### 2.6 User Authentication and Profiles
 
 NewJams uses **Supabase Authentication** to support account-based functionality.
 
-Features include:
+Capabilities include:
 
 - Email and password authentication.
-- Personalized user profiles.
-- Profile information management.
-- Avatar customization.
-- Account-specific settings.
-- Persistent preferences and supported saved content.
+- User registration and sign-in.
+- Account profile management.
+- Avatar and profile customization.
+- Account-specific preferences.
+- Persistent saved content where supported.
+- Authentication-session management.
 
-The application integrates frontend account interfaces with managed backend services, allowing users to maintain a more personalized experience.
+The authentication architecture separates identity management from the React frontend.
 
-### Listening Activity and Analytics
+### 2.7 Listening Activity
 
-NewJams includes listening-related functionality intended to provide insight into individual music activity.
+The application includes listening-related functionality intended to provide users with information about their activity.
 
-Supported features include:
+Features developed for the project include accumulated listening time, frequently played music, and account-associated listening information.
 
-- Accumulated listening time.
-- Frequently played songs.
-- Individual listening activity.
-- Personalized listening information.
+### 2.8 Interface and Personalization
 
-These features are part of the application's evolving account and music experience.
+NewJams combines modern application conventions with a restrained Y2K-inspired visual language.
 
-### Interface and Personalization
+The interface incorporates:
 
-The NewJams interface combines contemporary music application design with visual influences from Y2K aesthetics.
+- Dark mode as the default theme.
+- Optional light-mode preferences.
+- Persistent theme settings.
+- Component-based layouts.
+- Consistent typography and spacing.
+- Responsive browser layouts.
+- Shared visual components across platforms.
+- Platform-specific desktop navigation adjustments.
 
-Design priorities include:
-
-- A consistent visual identity across platforms.
-- Dark mode enabled by default.
-- An optional light theme.
-- Saved theme preferences.
-- Responsive web layouts.
-- Reusable interface components.
-- Clear navigation and playback controls.
-- Desktop-specific interface adjustments.
-
-Theme preferences can be retained through account settings, providing a consistent personalized experience.
+The objective is to provide a recognizable interface without sacrificing clarity or usability.
 
 ---
 
-## 🛠 Technology Stack
+## 03. Supported Platforms and Distribution
 
-NewJams uses a combination of frontend technologies, desktop application tooling, managed backend services, and cloud infrastructure.
+NewJams is available through a hosted web application and separately packaged desktop installations.
 
-| Category | Technology | Purpose |
-|---|---|---|
-| Frontend | React | Component-based user interface |
-| Programming | JavaScript | Application logic and interactivity |
-| Styling | CSS | Layout, themes, and visual presentation |
-| Build Tool | Vite | Frontend development and production builds |
-| Desktop Framework | Electron | Windows and macOS desktop applications |
-| Desktop Packaging | Electron Builder | Installer creation and release packaging |
-| Authentication | Supabase Auth | Account registration and sign-in |
-| Backend Services | Supabase | Account-related services and application data |
-| Database | PostgreSQL | Persistent data through Supabase |
-| Media Integration | YouTube Embedded Player | Supported music and video playback |
-| Web Hosting | Cloudflare Pages | Production website deployment |
-| File Distribution | Cloudflare R2 | Public desktop installer hosting |
-| Source Control | Git and GitHub | Private repositories and version history |
-| CI/CD | GitHub Actions | Automated builds, validation, and releases |
-| Update Security | Ed25519 and SHA-256 | Signed update policies and file integrity verification |
+### 3.1 Web Application
 
----
+**Production URL:** https://newjams.pages.dev/
 
-## 🏗 Application Architecture
+The web version is hosted on Cloudflare Pages and is accessible through a compatible browser.
 
-NewJams is structured around a shared frontend, managed backend services, platform-specific desktop functionality, and independently hosted release infrastructure.
+No local development tools or application installation are required.
 
-### 1. React Frontend
+### 3.2 Desktop Applications
 
-The primary application interface is developed with React and JavaScript.
+The desktop versions are packaged with Electron and distributed as platform-specific installers.
 
-The frontend manages the interactive user experience, including navigation, music browsing, playback controls, playlists, profiles, settings, and media presentation.
+| Platform | Architecture | Package Format | Release |
+|---|---|---|---|
+| Windows | x64 | `.exe` | v1.0.5 |
+| macOS | Apple Silicon / ARM64 | `.dmg` | v1.0.5 |
+| macOS | Intel / x64 | `.dmg` | v1.0.5 |
 
-Reusable components help maintain a consistent interface between the browser application and desktop versions.
-
-Vite supports local development and optimized production builds.
-
-### 2. Authentication and Data Persistence
-
-Supabase provides the application's authentication and managed backend infrastructure.
-
-The frontend communicates with Supabase services to support user authentication, profile information, account preferences, and supported saved content.
-
-PostgreSQL provides the underlying relational database platform.
-
-This separation allows the user interface and persistent account data to be maintained independently.
-
-### 3. Media Playback Integration
-
-NewJams integrates supported third-party media using YouTube's embedded player.
-
-The application manages playback-related interactions while respecting the availability and embedding permissions of the original content.
-
-Desktop integration required additional handling because Electron applications can use a custom application origin rather than a conventional website origin.
-
-The desktop implementation was updated to provide the appropriate client identity and referrer information required for supported YouTube embedding.
-
-NewJams also includes playback error handling for content that cannot be embedded.
-
-### 4. Electron Desktop Applications
-
-The desktop versions use Electron to package the web application into installable software.
-
-The desktop architecture includes:
-
-- Application window management.
-- Secure application-origin handling.
-- Platform-specific startup behavior.
-- Desktop-specific navigation.
-- Windows and macOS packaging.
-- Application version detection.
-- Update policy verification.
-- Installer download and verification.
-
-The application is distributed separately for Windows x64, macOS Apple Silicon, and macOS Intel.
-
-### 5. Cloudflare Hosting and Distribution
-
-NewJams separates website hosting from downloadable software distribution.
-
-**Cloudflare Pages** hosts the production web application at:
-
-https://newjams.pages.dev/
-
-**Cloudflare R2** stores publicly downloadable desktop installers and update-related release files.
-
-This arrangement allows users to access the website and download installation packages without accessing the private source repositories.
-
-The public website provides platform-specific download options while the underlying development repositories remain private.
-
-### 6. GitHub Actions and Release Automation
-
-NewJams uses GitHub Actions to automate important build and release processes.
-
-The workflow supports:
-
-- Production frontend builds.
-- Automated test execution.
-- Windows application packaging.
-- Apple Silicon macOS packaging.
-- Intel macOS packaging.
-- Packaged application launch checks.
-- Update-interface validation.
-- Installer artifact generation.
-- Release publishing and distribution.
-- Installer integrity verification.
-- Website download-link updates.
-
-Release validation helps reduce the risk of publishing incomplete or broken installation packages.
-
----
-
-## 🔄 Software Version Management and Updates
-
-Beginning with **NewJams v1.0.4**, the desktop application includes a version-management system designed to support reliable future updates.
-
-### Startup Version Checks
-
-When a supported desktop application launches, it checks a remotely hosted update policy.
-
-The policy can identify:
-
-- The latest available application version.
-- The minimum supported version.
-- Whether an update is optional or mandatory.
-- The appropriate installer for the user's platform.
-- Information needed to verify downloaded installation packages.
-
-### Optional Updates
-
-When a newer version is available but the installed version remains supported, the application can offer an update without preventing continued use.
-
-### Mandatory Updates
-
-When the installed version is below the minimum supported version, NewJams displays a required-update interface before allowing access to the main application.
-
-Users are given two primary choices:
-
-- **Update NewJams**
-- **Quit Application**
-
-This helps prevent outdated application versions from continuing to operate when a newer release is required.
-
-### Secure Update Verification
-
-The update system includes multiple integrity protections.
-
-- **Ed25519 digital signatures** are used to verify the update policy.
-- **SHA-256 hashes** are used to verify downloaded installer files.
-- Installer selection is based on the supported operating system and architecture.
-- Invalid update information is rejected rather than trusted automatically.
-
-For the current unsigned desktop distribution, NewJams downloads and verifies the appropriate installer before opening it for installation.
-
-Fully automatic in-place application replacement is not enabled in v1.0.4.
-
-### Update Reliability
-
-The update experience also accounts for operational failures.
-
-If the update policy service is temporarily unavailable, the application can allow continued access rather than permanently blocking the user.
-
-Failed downloads can be retried.
-
-**Compatibility note:** Versions earlier than v1.0.4 do not include this startup update system. Users of those versions must manually install an update-enabled release before receiving future in-app update notifications.
-
----
-
-## 🔐 Security and Source Code Management
-
-NewJams is developed using privately maintained GitHub repositories.
-
-The project separates its development resources from publicly accessible application files.
-
-### Private Development Repositories
-
-The original source code, internal development files, and release automation configurations are not publicly distributed through an open-source repository.
-
-### Public Distribution
-
-Users can access:
-
-- The hosted web application.
-- Windows and macOS installers.
-- Public files necessary for software distribution and update checks.
-
-Public access to the application does not provide access to the private GitHub repositories.
-
-However, distributed browser and Electron applications necessarily contain client-side code that can be inspected. Private repositories protect the original development environment and non-distributed resources, not every aspect of compiled or bundled client-side software.
-
-### Release Security
-
-The release process uses private GitHub Actions secrets for sensitive publishing and signing credentials.
-
-The update system uses signed policy information and file-integrity verification to help prevent unauthorized or corrupted update packages from being accepted.
-
----
-
-## 🧪 Testing and Quality Assurance
-
-NewJams development includes automated testing and packaged-application verification.
-
-For **v1.0.4**, the release process reported:
-
-- 20 passing automated tests.
-- A successful production frontend build.
-- Successful Windows x64 build and installation checks.
-- Successful macOS Apple Silicon build and launch checks.
-- Successful macOS Intel build and launch checks.
-- Verification of mandatory and optional update screens.
-- Successful full-file SHA-256 verification of the three published installers.
-- Successful release and website deployment workflows.
-
-These checks validate important parts of the release process.
-
-They do not establish that every feature has been tested under every real-world account, device, or network condition. In particular, a complete upgrade using an existing signed-in user's data was not verified during the v1.0.4 release.
-
----
-
-## 📦 Releases and Distribution
-
-### Current Release — v1.0.4
-
-**[Download the Latest Version](https://newjams.pages.dev/)**
-
-The official website provides the latest supported installers.
+**Official Downloads**
 
 | Platform | Installer |
 |---|---|
-| Windows x64 | [Download `.exe`](https://pub-f37b1abf363249fc941a05f7c78de0d7.r2.dev/v1.0.4/NewJams-Setup-1.0.4-x64.exe) |
-| macOS Apple Silicon | [Download `.dmg`](https://pub-f37b1abf363249fc941a05f7c78de0d7.r2.dev/v1.0.4/NewJams-1.0.4-mac-arm64.dmg) |
-| macOS Intel | [Download `.dmg`](https://pub-f37b1abf363249fc941a05f7c78de0d7.r2.dev/v1.0.4/NewJams-1.0.4-mac-x64.dmg) |
+| Windows x64 | [Download NewJams for Windows](https://pub-f37b1abf363249fc941a05f7c78de0d7.r2.dev/v1.0.5/NewJams-Setup-1.0.5-x64.exe) |
+| macOS Apple Silicon | [Download NewJams for Apple Silicon](https://pub-f37b1abf363249fc941a05f7c78de0d7.r2.dev/v1.0.5/NewJams-1.0.5-mac-arm64.dmg) |
+| macOS Intel | [Download NewJams for Intel Mac](https://pub-f37b1abf363249fc941a05f7c78de0d7.r2.dev/v1.0.5/NewJams-1.0.5-mac-x64.dmg) |
 
-Desktop releases are distributed through Cloudflare R2 rather than public source-code repositories.
+The website and desktop installers are distributed independently of the original development repositories.
 
-### Release History
+**Installation notice:** The current desktop builds are unsigned and not notarized. Operating-system security warnings may appear during installation.
 
-| Version | Development Milestone |
+---
+
+## 04. Technology Stack
+
+The application integrates frontend technologies, managed backend infrastructure, desktop tooling, and cloud-based distribution services.
+
+| Layer | Technology | Responsibility |
+|---|---|---|
+| Frontend Framework | React | Component-based application interface |
+| Programming Language | JavaScript | Client-side application behavior |
+| Styling | CSS | Layouts, themes, and responsive design |
+| Build System | Vite | Development tooling and optimized production bundles |
+| Desktop Runtime | Electron | Standalone Windows and macOS applications |
+| Desktop Packaging | Electron Builder | Installer generation and platform packaging |
+| Authentication | Supabase Auth | Account registration, login, and sessions |
+| Backend Services | Supabase | Managed application backend |
+| Database | PostgreSQL | Persistent application and user data |
+| Media Integration | YouTube Embedded Player | Supported music and video playback |
+| Web Deployment | Cloudflare Pages | Production website hosting |
+| Installer Hosting | Cloudflare R2 | Public release artifact distribution |
+| Source Control | Git | Version management |
+| Repository Hosting | GitHub | Private source and release repositories |
+| Automation | GitHub Actions | Build, test, and release workflows |
+| Policy Verification | Ed25519 | Cryptographic update-policy authentication |
+| Artifact Verification | SHA-256 | Installer integrity verification |
+
+---
+
+## 05. System Architecture
+
+NewJams uses a shared React frontend with platform-specific Electron integration and managed backend services.
+
+### 5.1 Frontend Layer
+
+The application interface is implemented using React and JavaScript.
+
+Reusable components support navigation, media playback, music organization, profiles, account settings, and personalization.
+
+Vite provides development tooling and production compilation.
+
+Sharing frontend components between browser and desktop builds reduces duplicated implementation while maintaining a consistent user experience.
+
+### 5.2 Backend and Data Layer
+
+Supabase provides account authentication and managed backend services.
+
+PostgreSQL supports persistence for application-related user data.
+
+The frontend communicates with Supabase services to support authenticated operations and account-specific functionality.
+
+This architecture separates user-facing presentation from persistent data management.
+
+### 5.3 Media Integration Layer
+
+NewJams uses supported YouTube embeds to display externally hosted media.
+
+Playback controls and error handling are integrated into the application interface.
+
+The system accounts for embedding restrictions and provides access to external playback when supported content cannot be embedded.
+
+The desktop integration includes appropriate referrer handling for Electron's application environment.
+
+### 5.4 Desktop Application Layer
+
+Electron provides the desktop runtime and operating-system integration.
+
+The desktop layer supports:
+
+- Standalone application windows.
+- Secure renderer configuration.
+- Platform-specific application startup.
+- Controlled external navigation.
+- Desktop-specific interface behavior.
+- Application version checking.
+- Installer download and verification.
+- Windows and macOS packaging.
+
+### 5.5 Cloud Infrastructure
+
+NewJams separates web hosting from installer distribution.
+
+**Cloudflare Pages** hosts the public browser application.
+
+**Cloudflare R2** stores publicly downloadable desktop installation packages and update-related artifacts.
+
+Private GitHub repositories hold the original development resources and support the build and release process.
+
+This separation allows the application to remain publicly accessible while preserving the privacy of its source repositories.
+
+---
+
+## 06. Desktop Version Management
+
+NewJams introduced its desktop update architecture in v1.0.4.
+
+The system checks a remotely hosted update policy and determines whether an installed desktop version is currently supported.
+
+### 6.1 Update Policy
+
+The update policy contains information used to determine:
+
+- Latest available application version.
+- Minimum supported application version.
+- Optional or mandatory update status.
+- Platform-specific installer selection.
+- Installer verification requirements.
+
+### 6.2 Mandatory and Optional Updates
+
+When a newer version is available, the application can display an update prompt.
+
+Updates become mandatory when the installed version falls below the configured minimum supported version.
+
+For mandatory updates, the interface requires the user to update or quit before entering the main application.
+
+If the policy service becomes temporarily unavailable, the application can continue without indefinitely locking users out.
+
+### 6.3 Cryptographic Verification
+
+The update architecture uses two separate protections.
+
+| Mechanism | Purpose |
 |---|---|
-| v1.0.2 | Earlier desktop distribution and packaging improvements |
-| v1.0.3 | Desktop playback integration fixes, default dark mode, and platform-specific interface changes |
-| v1.0.4 | Signed update policies, version checks, mandatory and optional update interfaces, and verified installer-based updates |
+| Ed25519 signatures | Verify the authenticity of update policy data |
+| SHA-256 checksums | Verify the integrity of downloaded installer packages |
+
+The current unsigned distribution uses installer-based updates.
+
+NewJams can download, verify, and open the installer, but users must complete the installation themselves.
+
+Fully automatic in-place replacement is not currently enabled.
 
 ---
 
-## 🎯 Project Objectives
+## 07. Security and Proprietary Source Code
 
-NewJams was developed to explore and apply practical software engineering concepts through a complete user-facing application.
+**NewJams is proprietary software. The original development source code and private GitHub repositories are not publicly distributed.**
 
-The project's main objectives include:
+The project follows a separation between internal development resources and the files necessary for public application use.
 
-1. **Frontend Engineering** — Build a responsive, component-based application with reusable UI elements and consistent navigation.
-2. **Full-Stack Integration** — Connect frontend functionality to authentication, persistent data, and managed backend services.
-3. **Cross-Platform Development** — Adapt a shared web application into native desktop installation packages for Windows and macOS.
-4. **Cloud Infrastructure** — Deploy the website and distribute downloadable software using independent cloud services.
-5. **Software Release Engineering** — Automate builds, testing, packaging, verification, and release publication.
-6. **Application Security** — Protect development resources and verify software update information and installer integrity.
-7. **User Experience** — Create an accessible, visually distinctive application with personalization and intuitive media controls.
+### 7.1 Private Development Repositories
 
-The project demonstrates experience extending beyond interface development into application architecture, distribution, and maintenance.
+Both the primary source repository and the release repository are privately maintained.
+
+The original repository structure, development history, internal resources, and privileged deployment credentials are not made publicly available as open-source distributions.
+
+### 7.2 Production Code Hardening
+
+Version 1.0.5 introduced additional protections designed to reduce unnecessary source exposure and increase the difficulty of analyzing distributed application code.
+
+Implemented measures include:
+
+- Optimized production JavaScript minification.
+- Selective first-party JavaScript obfuscation.
+- Minified Electron main and preload modules.
+- Production-only Electron packaging.
+- Exclusion of original Electron development source files.
+- Disabled production source maps.
+- Exclusion of unnecessary development resources.
+- Reduced packaged runtime dependencies.
+- Electron ASAR packaging and supported integrity checks.
+- Hardened Electron security configuration.
+
+These measures improve production hygiene and raise the effort required to interpret bundled code.
+
+### 7.3 Packaging Optimization
+
+The v1.0.5 security-hardening effort also reduced unnecessary files in the Electron application archive.
+
+| Packaging Metric | v1.0.4 | v1.0.5 |
+|---|---:|---:|
+| Packaged ASAR files | 2,202 | 212 |
+| ASAR archive size | 13.80 MB | 1.87 MB |
+| Original Electron source tree | Included as readable modules | Excluded |
+| First-party Electron modules | Readable | Minified and selectively obfuscated |
+
+The resulting ASAR archive was approximately **86% smaller**.
+
+Archive-size reduction reflects packaging optimization and should not be interpreted as a quantitative security guarantee.
+
+### 7.4 Electron Security Controls
+
+The application retains Electron security protections, including:
+
+- Context isolation.
+- Renderer sandboxing where supported.
+- Disabled renderer Node.js integration.
+- Restricted navigation.
+- Controlled external-link handling.
+- Reduced exposure of native functionality.
+- Compatible ASAR integrity features and Electron fuses.
+
+### 7.5 Secret Management
+
+Privileged release and deployment credentials are maintained separately from public application artifacts.
+
+The v1.0.5 release audit reported that no privileged credentials were identified in the packaged application.
+
+Public client configuration is distinguished from secret backend or release credentials.
+
+### 7.6 Source Availability and Limitations
+
+NewJams is not released as an open-source project.
+
+Public access is limited to the hosted web application, desktop installers, and required public distribution assets.
+
+**The original source repository is not provided to users.**
+
+As with other browser-based and Electron applications, the distributed software contains client-side code that can be inspected or reverse-engineered.
+
+Minification, obfuscation, and packaging do not provide absolute protection against code extraction.
+
+They are used to reduce exposure of unnecessary resources and make remaining distributed code harder to interpret.
 
 ---
 
-## 🚀 Future Development
+## 08. Testing and Quality Assurance
 
-NewJams remains an actively maintained personal project.
+NewJams development includes automated tests, packaged application checks, and release-artifact validation.
 
-Potential improvements include:
+### 8.1 Testing Coverage
 
-- Expanded listening analytics and user statistics.
-- Additional playlist organization features.
-- Improved music discovery and search.
-- More profile customization options.
-- Accessibility and performance improvements.
-- Continued refinement of desktop media playback.
-- Improved update installation workflows.
-- Platform signing and notarization for smoother desktop installation.
-- Additional automated integration and end-to-end testing.
+Project verification has included:
 
-Future functionality is subject to development priorities and technical feasibility.
+- Automated application tests.
+- Frontend production builds.
+- Desktop application startup checks.
+- Navigation validation.
+- Music playback controls.
+- YouTube integration checks.
+- Update-policy behavior.
+- Installer integrity verification.
+- Electron security configuration.
+- Production packaging inspection.
+- Source exposure audits.
+
+### 8.2 Platform Validation
+
+Desktop releases have been evaluated across Windows x64, macOS ARM64, and macOS x64 environments.
+
+Testing has included packaged application launch checks and relevant workflow verification.
+
+Some functionality, such as authentication with real accounts and complete update-installation scenarios, has not been comprehensively exercised in every production environment.
+
+### 8.3 v1.0.5 Release Verification
+
+The v1.0.5 release validation included:
+
+- 20 passing automated tests.
+- Successful production frontend compilation.
+- Windows x64 packaged application verification.
+- macOS Apple Silicon packaged application checks.
+- macOS Intel packaged application checks.
+- Installer checksum verification.
+- Electron ASAR and fuse inspection.
+- Signed update-policy verification.
+- Cloudflare Pages deployment verification.
+- Cloudflare R2 installer-integrity validation.
+
+These checks provide release confidence but do not constitute a guarantee that every operation has been tested across all devices and accounts.
 
 ---
 
-## 👨‍💻 Developer
+## 09. Build and Release Engineering
+
+NewJams was developed with a structured release process rather than relying exclusively on manually uploaded application files.
+
+The release architecture supports:
+
+1. Application compilation.
+2. Automated test execution.
+3. Production asset generation.
+4. Desktop application packaging.
+5. Platform startup validation.
+6. Installer creation.
+7. Cryptographic integrity verification.
+8. Artifact distribution through Cloudflare R2.
+9. Website deployment through Cloudflare Pages.
+10. Application version and update-policy management.
+
+GitHub Actions has been used for cross-platform build and release automation.
+
+The existing infrastructure also supports direct website deployment when GitHub Actions execution is unavailable.
+
+The release process keeps the public application distribution separate from the private development repositories.
+
+---
+
+## 10. Release History
+
+| Version | Milestone |
+|---|---|
+| **v1.0.2** | Desktop packaging and initial distribution improvements |
+| **v1.0.3** | Desktop playback handling, default dark theme, and navigation refinements |
+| **v1.0.4** | Signed update policies, version management, and installer verification |
+| **v1.0.5** | Production code hardening, optimized packaging, and application security improvements |
+
+**Current confirmed production release:** v1.0.5.
+
+The project was restored to the original v1.0.5 interface after subsequent experimental changes. The public website and desktop download links correspond to the stable v1.0.5 release.
+
+---
+
+## 11. Engineering Objectives and Outcomes
+
+NewJams was developed to apply software engineering principles to a complete application rather than an isolated programming exercise.
+
+### Frontend Engineering
+
+Implemented a component-based interface using React, JavaScript, and CSS.
+
+Developed consistent navigation, application views, playback controls, and theme behavior.
+
+### Backend Integration
+
+Integrated managed authentication and persistent data through Supabase and PostgreSQL.
+
+Supported account-specific application functionality without maintaining a custom password authentication service.
+
+### Cross-Platform Engineering
+
+Adapted a shared frontend for browser-based use and packaged desktop applications.
+
+Supported Windows x64, macOS Apple Silicon, and macOS Intel.
+
+### Cloud Deployment
+
+Established public website hosting through Cloudflare Pages and installer distribution through Cloudflare R2.
+
+Separated public distribution assets from private project repositories.
+
+### Release Engineering
+
+Developed automated build, packaging, testing, and verification workflows.
+
+Introduced application version management and cryptographically verified update metadata.
+
+### Application Security
+
+Implemented secure Electron configuration, production-only packaging, JavaScript hardening, secret-management separation, and release-integrity verification.
+
+Together, these areas demonstrate practical experience across frontend development, backend integration, infrastructure, desktop distribution, and application maintenance.
+
+---
+
+## 12. Maintenance and Project Scope
+
+NewJams is independently maintained.
+
+Development has focused on application stability, interface consistency, playlist management, media playback compatibility, release reliability, and protection of original development resources.
+
+The application may receive targeted maintenance or improvements where necessary.
+
+Its features and third-party media availability remain subject to technical compatibility and external platform requirements.
+
+---
+
+## 13. Developer
 
 **George Paraskevopoulos**  
-Independent Software Developer
+*Independent Software Developer*
 
-**GitHub:** https://github.com/Unknown-George  
-**Project:** https://newjams.pages.dev/
+**GitHub:** [github.com/Unknown-George](https://github.com/Unknown-George)  
+**Application:** [newjams.pages.dev](https://newjams.pages.dev/)
 
 NewJams was independently developed as a personal software engineering project.
 
-The project demonstrates practical work across React frontend development, backend integration, authentication, desktop application packaging, cloud deployment, CI/CD automation, software distribution, and secure update management.
+The project reflects hands-on experience in designing, developing, securing, packaging, deploying, and maintaining a cross-platform application.
 
-It reflects an interest in building software that combines technical functionality with a distinctive, user-focused design.
+It represents a combination of software engineering practice and a music-focused, user-oriented product concept.
 
 ---
 
-## Copyright and Intellectual Property
+## 14. Intellectual Property and Licensing
 
 **Copyright © 2026 George Paraskevopoulos. All rights reserved.**
 
-Original project code, independently created interface designs, and proprietary project assets remain the intellectual property of their respective owners.
+NewJams is a privately maintained, proprietary software project.
 
-No general permission to reproduce, modify, redistribute, or commercially exploit proprietary NewJams materials is granted through public access to the application.
+The original development source code is not publicly distributed, and no general open-source license is granted for proprietary project materials.
+
+Public access to the website or desktop application does not grant permission to reproduce, redistribute, or commercially exploit proprietary NewJams code and original assets beyond what applicable law or relevant third-party licenses permit.
 
 Third-party libraries and dependencies remain subject to their respective licenses.
 
-Music, video content, trademarks, logos, artwork, and other third-party materials remain the property of their respective rights holders.
+All third-party music, videos, trademarks, logos, artwork, and other protected materials remain the property of their respective rights holders.
 
 ---
 
-## Disclaimer
+## 15. Disclaimer
 
 NewJams is an **independent, unofficial fan-developed application**.
 
 The project is not affiliated with, authorized by, sponsored by, or endorsed by NewJeans, ADOR, HYBE, YouTube, or their respective subsidiaries or affiliates.
 
-References to NewJeans and associated media are used for descriptive and identification purposes.
+References to NewJeans and associated media are used for identification and descriptive purposes.
 
-Third-party media is accessed through supported external services and remains subject to applicable platform terms, copyright restrictions, embedding permissions, and content availability.
+Third-party media is accessed through supported external services and remains subject to applicable copyright laws, platform terms, embedding permissions, and content availability.
 
-NewJams does not claim ownership of third-party music, videos, trademarks, or other protected materials.
+NewJams does not claim ownership of third-party intellectual property.
 
 ---
 
-### NewJams ♡
+**NewJams**
 
-**Music, technology, and a little Y2K nostalgia.**
+*A Cross-Platform Music Application*
 
-Developed and maintained by **[George Paraskevopoulos](https://github.com/Unknown-George)**.
+Developed and maintained by **[George Paraskevopoulos](https://github.com/Unknown-George)**
 
-**[Launch NewJams](https://newjams.pages.dev/)** · **[Download NewJams](https://newjams.pages.dev/)** · **[GitHub Profile](https://github.com/Unknown-George)**
+[Official Website](https://newjams.pages.dev/) · [Desktop Downloads](https://newjams.pages.dev/) · [Developer GitHub](https://github.com/Unknown-George)
 
-© 2026 George Paraskevopoulos. All rights reserved.
+**© 2026 George Paraskevopoulos. All rights reserved.**
