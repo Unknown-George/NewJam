@@ -6,9 +6,9 @@
 
 *A thoughtfully designed music platform combining modern web technologies with a nostalgic, Y2K-inspired listening experience.*
 
-**[Launch NewJams](https://newjams.netlify.app)** · **[Developer GitHub](https://github.com/Unknown-George)**
+**[Launch NewJams](https://newjams.pages.dev/)** · **[Developer GitHub](https://github.com/Unknown-George)**
 
-**[newjams.netlify.app](https://newjams.netlify.app)**
+**[newjams.netlify.app](https://newjams.pages.dev/)**
 
 </div>
 
